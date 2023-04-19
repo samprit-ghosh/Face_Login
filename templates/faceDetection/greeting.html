@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Welcome-Page</title>
+  <link href="https://cdn4.vectorstock.com/i/1000x1000/62/48/green-round-glossy-login-icon-vector-2976248.jpg" rel="icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+
+
+*a{
+  text-decoration: none;
+}
+
+*a:hover{
+  text-decoration: none;
+}
+
+    
+    .row.content {height: 1500px}
+    
+
+    .sidenav {
+      background-color: #e4cdcd;
+      height: 100%;
+    }
+    
+
+
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+
+    body {
+      /* background-image: url('wa'); */
+
+      background: #B24592; 
+background: -webkit-linear-gradient(to right, #973a4b, #B24592);  
+background: linear-gradient(to right, #c43e57, #B24592);
+
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+color: #000;
+      margin: 0;
+      padding: 0;
+  }
+  
+
+
+  /* Set the width and height of the scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Set the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+  
+    background-color: #85008a;
+  }
+  
+  /* Set the color of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(189, 9, 9);
+  }
+  
+  /* Set the color of the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 0, 194);
+  }
+
+
+
+
+  .responsive-bar{
+display: none;
+}
+nav{
+width: 100%;
+position: fixed;
+background-color: #000000;
+top: 0;
+left: 0;
+height: 100px;
+padding: 10px 100px;
+text-decoration: none;
+box-sizing: border-box;
+transition: .5s;
+z-index: 3;
+
+
+}
+nav.black{
+background: rgba(0,0,0,0.8);
+height: 80px;
+padding: 10px 50px;
+}
+nav .logo{
+float: left;
+}
+nav .logo img{
+height: 80px;
+transition: .5s;
+}
+nav.black .logo img{
+height: 60px;
+}
+nav > ul{
+width: 80%;
+margin: 0 auto;
+padding: 0;
+display: flex;
+justify-self: center;
+justify-content: center;
+}
+nav > ul > li{
+list-style: none;
+display: inline-block;
+}
+nav > ul > li > a:hover{
+background: #9c2905;
+color: #fff;
+text-decoration: none;
+}
+nav > ul > li > a{
+color: #ffffff;
+text-decoration: none;
+text-transform: uppercase; /*for capitalisation of letters */
+line-height: 80px;
+padding: 5px 20px;
+transition: .5s;   
+}
+nav.black > ul > li > a{
+color: #fff;
+line-height: 60px;
+}
+
+
+@media(max-width:768px){
+.responsive-bar{
+display: block;
+width: 100%;
+height: 60px;
+background: #000000;
+position: fixed;
+top: 0;
+left: 0;
+padding: 5px 20px;
+box-sizing: border-box;
+z-index: 14;
+
+}
+.responsive-bar .logo img{
+float: left;
+height: 50px;  
+}
+.responsive-bar .menu h4{
+float: right;
+color: #fff;
+margin: 0;
+padding: 0;
+line-height: 50px;
+cursor: pointer;
+/* z-index: 10; */
+text-transform: uppercase;
+}
+nav{
+padding: 0;
+z-index: 3;
+position: fixed;
+
+}
+
+
+/* .learn-more-btn-upload{
+    z-index:0;
+} */
+
+nav,
+nav.black{
+/* background: #000000; */
+height: 60px;
+padding: 0;
+}
+nav .logo{
+display: none;
+}
+nav ul{
+position: absolute;
+width: 100%;
+top: 60px;
+left: 0;
+background: #000000;
+float: none;
+display: none;
+
+}
+nav ul.active{
+display: block;
+}
+nav ul li{
+width: 100%;
+}
+nav ul li a{
+display: block;
+ 
+width: 100%;
+text-align: center;
+line-height: 35px !important;
+color: #fff;
+
+
+}
+
+nav > ul{
+width: 100%;
+display: none;
+}
+nav > ul > li{
+display: block;
+text-align: center;
+}
+.active{
+display: block;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+ 
+ 
+</head>
+
+<div class="responsive-bar">
+ 
+  <div class="menu">
+  <h4>Menu</h4>
+  </div>
+</div>
+<nav>
+
+<ul>
+  <li><a href="/">Home</a></li>
+   <li><a href="#about">About us</a></li>
+   <li><a href="#footer">Portfolio</a></li>
+   <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</nav>
+
+      <script type="text/javascript">
+    $(window).on('scroll',function(){
+        if($(window).scrollTop()){
+            $('nav').addClass('black');
+        }
+        else{
+            $('nav').removeClass('black');
+        }
+    })
+/*menu button onclick function*/         $(document).ready(function(){
+            $('.menu h4').click(function(){
+                $("nav ul").toggleClass("active")
+        })
+        })
+    </script>
+
+
+
+
+<body onload="seeColor(document.getElementById('colorsList'))">
+    <br>
+<br>
+<br>
+<div style="background-color: #85008a;padding-top: 100px; padding-bottom:80px;">
+   <center> <h1 style="color: #000000;">Welcome To Our Page {{ user.name }}</h1></center></div>
+<br>
+<br>
+<br>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+        <br>
+      <h4>Samprit's Blog</h4>
+      <br>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="/">Friends</a></li>
+        <li><a href="/">Family</a></li>
+        <li><a href="/">Photos</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+        
+      </div>
+      <br>
+
+      <select onchange="changeBackgoundColor(this)" class="form-control">
+        <option value="white">white</option>
+        <option value="gray">Gray</option>
+        <option value="yellow">Yellow</option>
+        <option value="coral">Coral</option>
+      </select></div>
+  
+  
+
+
+  <script>
+    function changeBackgoundColor(e){
+      document.body.style.background=e.value;
+    }
+  </script>
+    
+    <div class="col-sm-9" id="about">
+      <h4><small style="color: #000;">RECENT POSTS</small></h4>
+      <hr>
+      <h2>Hello Good Greeting Everyone..This is Form Samprit !!</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Samprit Ghosh, April 30, 2023.</h5>
+      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Love</span></h5><br>
+      <p>Welcome to our website! We are thrilled to have you here and hope you find everything you're looking for. Our goal is to provide you with an effortless experience from start to finish, whether you're simply browsing or ready to make a purchase. We take pride in offering the highest quality products and services, and our knowledgeable team is always available to assist you with any questions or concerns you may have. Please take a moment to explore our site and discover all that we have to offer. Thank you for choosing us and we look forward.</p>
+      <br><br>
+      
+      <h4><small style="color: #000;">RECENT POSTS</small></h4>
+      <hr>
+      <h2 id="family">Officially Blogging</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Samprit Ghosh, April 30, 2023.</h5>
+      <h5><span class="label label-success">Love</span></h5><br>
+      <p>Login forms are one of the most important user interface elements in mobile applications and websites page with a members-only area.
+
+        Why are they so important? They are the doors to the world that you have created. People are always a flight risk when they try to fill in a login form. Even the tiniest detail can scare them away. And there isn’t an alternative, you cannot remove the login form and just let everyone in.</p>
+      <hr>
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIgYqjNVQSYlcOONsKMfyvLJWY-MGgtqwfqMx7-2kjzg&s" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Anja <small style="color: #000000;">Sep 29, 2015, 9:12 PM</small></h4>
+          <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAABg1BMVEX/VVUzMzNIPjf049dfjdNeXl6zs7MaGhrs3NH0UlLxVlb////K2fAAAAD/V1eZmZlERESXpr1eW1VeZHBfhL5YWFgoMjKNQEDPTEwcMTH/5U0/Pz8oFwskHxwvLy8pKSn+7OBOg9A8PTaPj4/g5/SwsLAvPDTm5ub/7Uy4S0j/UFDMzMwAEABpQTs3PTVNY4ZnktX/Q1ZZQDmuxOf/R0esubnbf3w7MSoUDgvI09N8fHy8zuzay8AwJh42LinJu7G0p54TEwEfFQff1NGERD/ITUt3Qz3gUE+rSUbj8vL/9Uz/jlL/zU//o1HuzsSQg3uKf3jhoqJaUk3cra3uhISdNzT11svzaGh+fn55mMpKNjaOpdKksdKHqN2eR0N7Qz71l5f/b1T7dHT5gIC/cm60d3LglpH/t1B0aGHdhoL/wU//m1L/qlH/1U6nmpK8nJUcOzPSwMBwKiRYIxzYtrZDHhX4wLdvKiT6pZ3PlpZveYtYKycJISGnrbi4vdKeQ0MAFRV2j2rRAAAQRElEQVR4nO3c+3/SVhsAcELKtZJW9lKLpRDoSi1Y3lqxYEcBe3duQplurZfqdHN1bt1007nLq++f/p6T68k5J4QkJ9zePj/4URrK+fo85xaS+Paj4x2+iG/M4xw46nEOHPU4B456nANHPc6Box7nwFGPc+Coxzlw1OMcOOpxDhz1OAeOevQBKAgCPEMZ8QnefxYZHgOFyO7JSi5fApHPr+0c7Hv7cZTwEihEllfyuZxfi1yulLs0K0hJ9fBzDeEdUIju5BGchiz5l3f8Jf/Obn+QngEjVJ6SSAma31uOeG/0CCgcmPJQaX7lIOqx0RtgZKVkzVOMawf7Xhq9AAqzvfJkY8l/MutBM+TwAAjK045PNpZ2dtm3BAZ7oHBi2ycbc55MksyBwomt+kQj74WQNVA4cOzz+/c8GG1YA3cd1aeawijj1viYA/fd+Py5E7atgcEYmHPjA0K2rYHBFCjsuQSW2M8VTIHLLgYYOVaYDzMsgRHXPg9mCoZAYSfnGpi7xDqFDIHuRlAlSsMLFFYY+Py5ZWYNkoMd0N4WwjTWGKeQGVBYY+LzlxgPM8yAjBLo9++wTSEroPCEkc+fZ7u4sv5t3/T2e1gMoVLkDtyajA2zOqDwtNDL7znIsQL6/e5VSFgCy3d72cMI7HiMF6TWGbzdSwr3WQ0xMJjue62A5adL22Xi1W/xF05yDIFM970WwEJ0aWnpkBC+wv7NahKUg+lqpjuwDH1Lt5+WjVV67Ytr2G9hNoZKwJ1+AYXD20uScPuZ8QefYwfu5lgCme4KLTL4VALe9RkzeOfKHeNxl1wBK/gLLNejFn2w/Bzk8C7WB699cdlYo666YO60Gd80vpTvH9BXfre0hE8T3165fMUwjgrOu2Bu7bt7vFhrG4glhl9VWM6Dwm18EL328+XLxhQ6ngUrne/X1w95nhcbqJDlMGq9ktn+BhtCv7wCgFdeIcLlnDNepfn1+vo6z0tCpCf2FVh4j/nuQB8Q3tGFjqb5yuYZL76QEwiFpwMC4ruJH2QfEP6gvuRoq7TZDov8XTWBIGp6kfYXiIbw5eeqDwivfCmPdg4G0c3TmghQLwHwRZhI4eCAvmvCj1oGfxSUIhXsjjH1TkOUUDCD6+t38RQOEAiIr5Q+qI8yNmeJil/hwTjUOiEvtocC6Lv2kzSK/qSPMVE7GQRDp6j7xMP1Q1FUXtBSOFigPA/+jMwStqbBVpgPy1GrNZpnO09aIM6ajRoviq3hABIrGRvAynw1Zhb1dnuzDqIycCC+FgXAXG++eT2A56z5y/e1mpTKxlm7E4tVpZ9sDhzoe2XcTcz+ujJrLaxU5lHfGex6L/TOCPph0x+DP6oPBoieRhCM+8H9WcFnNZBW/E3e6IOzBG8MsVUdWAYL95AVG7Gj91kAKxUAEpswQVWpDusiTwsxNg+6od/P8PR9z8BDdMmGn5PpDqxstngJBICx01alOl89MwH6Q3DN3ccNrxbl1+jZQ+KsGrmYqcTVv0mrTqn5nWq1BjpbvBprUH3wiAEBC89uvka2hUQDiBO/IGnytK2sOuXVptz1+FisZgKMV/2DAZZfF292OwGMr7c3wXIF5qLSQZZlKlCsmgJPY83KAICF8lc3i8Wbz8kzwGoIe8b6BFkT43DoRPua2JFLU/Sblmh8IEDh3mvgA8Kv9LOH+AXXhvNqHbgDEltwR2tofiwmbY3EdsxskAH/BYPIYPRQAhbv6b77b4xDOfrt0qact1oYUzRiftH4FwJYHwzQV34KhYLWCYU3V2/9ZmgFeurXJD+w/jQHvROCHNfqe2uDGGS+Kt58pg8ywv1bqauGA5AFd6d6SgOKjVhFfd0shTVQxPW9Wf8A5sHozd/RIWb/auqq4eQl8u1EuzpPa30YGTvBaNmmHdOMdWr1FaFv300gUf79nmGWuJq6dR/9f9YnwsoZdRYI12PokFqh1TFwtxp1tter9bxUe2H4WOGPra23BqB2Zq3SoqRHrM1jogoth6ALNiuDAfqeGRIodULDe8Ewqowzpw1lOtB5fCsWa2CeeKyOvSS2YnWxNSgg9qmgE97aRV+bLeV35eVMRaxXO8j6RQwDXhyfM+DmIgbWOciBYIhpiqeML6l0elGKsJXaeoO2JJLfF+TJcDNci1U7cFUNItw480sQohzlvMZOm/BsjLTfBe8SxZXckADfbKVShpZE1KEUVF4TnmOp1uvz0rmWVo0+rQNiMy6djpmXj/Tz/NezpSEB7oJOiF8sII80D96DamudduCUeNpqhkUTnlLAtbN2HBzbibfhKPuuMCRAXwR0wmW8KfCCtfz+M6nhSnTBaUbk0PeFkyEBCm9TW38QTfH7c7u+gjXKNJ4VomwvqHQOvL+Vuko05SRXEnzld86BZePpLffh/NK+WbBaI04ORfMl+JWiY9878y2nw3AOFPDVmvTiSh78Ge2h59HjXk9X/tkJF8DftrZ+I2p091fwR/lrp0DmPjdAYsskBQQ6rlH2Fermil9iyySF9IrgsEafD1MG6Z1QDqfjKPsEugL+sZV6SwcWnjvyvWefQFdAYsukh7NhxnlbzMPNJe7ElkmPwr0hSaArILFlQsJJCj15XoArINgybZm0qvDc9kDqSQLdAeGWyeyrvDL+7aZleOJzd+cLdcukhs31msh+lSa30c2b6VsmJcr2ljMeLGKkcAeEE4Xp0GBvnPHqiSTu7oSibpm0iNooUA8WaXK4vNXLfLXmszWSvveoQN0C6VsmLXruhl51QJ9rIH3LpEWPi278sn6W4bJE6VsmPXoTPvOqA/pcA7tsmaToaVsR9myE8bkHmm+ZpCg8D4ctfUMNXCa3TGhrIbC7EF45ipRogbXV7R3BUXzLVIj+qbZRiOwvf893F0If/92+2ozC4kvGA45boJAybpkKz2/ckFaVswdP5pL5mQ35+t4uPPDDjWRybu/jrOArvLxx4xcf0yS6Bhq3TIU/bwSDwf2DlWR+DgbXVi9gNuWBH51Kx+aTayfw3cFvWApdA9EtUyHalFo4NTOnhA4kiOEwBpybSy/CdwdvsCxT13flR/SJApRnUI4NGlBXhrHXFCB3pLydZZm6Bgpvt5Qtk1yecpgCaaECp4N6MCtT90B1taaUpxxT6ZwU3GlPQOlYpUCVJL5kJHT/4AhpyyTs7iE8EH/9W46/egHKB/9l+AU3Dtg8E5jBkzGuplJ/zyRDi4b2BSfkWO0FKB9pfP/iP8lLLJ7L6R4ItkypLY7LbBgbeDErNTtr7QuH4aHZ/xjfv5HmZpJrs66JrqeJyJNMKpXiOG7O2MDgsQzctvYVIfAh9vY58CsB8YFbotu16EFyJg2AdZDCKayJco1+sK7QD2SBBqcynBzJFXcPAnYHjD5IgjYA4CbHpbEaVYr0oWUn5I/JAoUVqsRM8sCN0NWJ3+Wk1IRNuUY5rI1KkVqPMlmyQIOaDybxgYtWuvl2aUf2cXUATFNqVCrSrGWNfiALVK9QJYnOe6IL4Iri45ROmA7gzZSK1KpGQYUSBRoMoBmESXRcps6BD2a0j5c7IZfBmykVqdU4up0lCzSY4bBIOn0moGMg4lM7YWaBaKj1MMM/npgg3rZAALnkE2dCp0DUp3ZCskalIu2ewmKWLFCiQiWhsweuOQMKezOGDzetUalIuy3X+NWJY/JdZAIdV6kjoPAxyeFAkxpdhEX6yFTIP6IUKK1CJaHpV3WsgbOYT+2E6QTZWKlIiyZC/gOtQIMJSoVKQgc3TjoBCjP4J6flTshlFsnWSiMpXciDVSilQBfn6T4QfQEKOwRQ64RHlOZOmAmhj1KgwSN6hYKYsT/QOADu4wXKaZ0wPU1p70V5QUMI+UfZiexFyhumTSoUFqntZwXZBwoPyM9NV2OxKmzWPKVGg6uS8HjbQOS3j0H+KAUaXDRNoJMitQ/cJRMYijdrjVYnlMng2165xcre9+G2dqqX334ovUg5GtlI0FJo99mVtoGUBIbkG1fFcLNNmwqVIoXE1UcfitvbxQ+PViUetUDlra5pzHgNJKYILqPfTSeKtVpwcZGo09UJLbIg1L/TChTbSLhOoV2gsEIMoSH8htxwMYgZ/zNBDZoveNQ9gxxnbyC1C4xQeiDtUoOaUXhM861SKzQw3d1ncyC1CzwgJ3nq/Z48j7T5YZbmg0ESpxIWwBl72wqbQEqFZpomX40tWvJoxCOrDHJJWy22C6RUqMlN/0oKH3bTUYgJa6CtGrUJJMfQ9JzZ1T7FnngYccoaOHPJQ+BHskKpdxvLwIVPevJNTPxLO1+1EbAEcg/sdEKbD46jdEGTpzbw/FEi0TOwE5hSK9QaaKsT2gSSnxYy8zVAW3sGxgMJiTjVE9DOttBmiZJdMG52d+eZPWBAIoIK7QFo50Hc9oBRcp1m8tgNXgRNNQVm5TACITHQC3DGziOf7AHJraDpJBGGrf3k+CIRYGC9fkGOz67Li24VGOgR+NEzIGWlbTaGNiTgBEWoA0FcX6UD05TQgHbmCZfAjMk6jRdbMpAiNAAvXHhMA6YTlJgeBNBkncaLCbUP4sJPs0bghVUKMDNFCfVcTT+BIbOLtGoaEBNOEsALvQI3hgnY1IEG4RIF+HiYgWZPn9oIINPEQ8RHAV4f4hI1necTKFATfjo5akCztXbDCFSE0OeiRAcC5DId2oNGzjCgJPwwSQfSBplFMrTvZPoMpKVQVNqKLNVUHwl8TAPSztYMCEiZCUWlQlFg9tEkHUid6Gnf4gwICCcKUQyjT4kTawkyg8eTVOBn9KXa8ADTsAuewYVUQHnoVrN5pPoQ4OokDfjZY5PF9vAAMwvhsLLNSWxAX20uofkQ4CQF+BjfLg0lcLGotSxxJGrjpxGY/dQAXFXyNwrAdHFBFyUaYPykAFEfBBLC4QWmA0WkaQkwZYRIoMEnAXHh8AIzC0EUFNgOksDshUkCiAmHFxgKGoCJ4kYGB2avT1KARuHQAtNzYtiQweJ0GgPiPhVoEA4tMNMSxSNkkFkIhjBg9vGkCRAVDiUwE5K3gzUECNqAAQmfDkSEQwkMhULpELJzAL6pYiBtBK4SPgSoC4cRmAbAECddfXA2DVGJREMUMxxeomTo69MJ9YVhBGYgsDoPn8sohs82AhtNsNyuhXBgbzGM26WQHLGWfAmJKOeSyKBTIHH9N4j+nnQKqUJOf7imGE8zAlKurQ0G1Y/uCzAd0gJ5eG+IYwTkMoRwSruErS/ATAgRTiu73UaGGZBLZ+YMwWX6+91ECI2q/IRpsc0Q2CX6AUyHjBGL82AvOJceG2AmhAtjDRFMEmMDnMeBgNhuZsYHSPpgEtNjA8S7oBpjM8gQXVAXjgfQzBditZIZWuCYlKhphY4LkDJJjNcg06ULjgXQbJIIjctKpsskMR5A0wSOPZAbD2C3SWK8gZkxAZomMD0ewK6TxDgAu1foGABNEzj2QG48gN0niXEGZsYEaJrA9HgALSaJ0QdaVejIA00TOPZA9dNHHPjP/y1Qu7t/xIH/NQNq306OK1D79JEGCvfNgPozfEYb+LcZUH/ARl+ANm7DjkbshHWF9imDPbf4f4ACWqkfMf5AAAAAAElFTkSuQmCC" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Samprit Ghosh <small style="color: #000;">Sep 25, 2015, 8:25 PM</small></h4>
+          <p>I am so happy for you man! Finally. I am looking forward to read about your trendy life. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOuAxGiKCziOs2mlOwN6fM-pf8epssISFVzyutJeBB7gXWeMtc44ydJSvDuXtCcZOzSV2Aelt0Uwo&usqp=CAU&ec=48665698" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Nested Bro <small style="color: #000000;">Sep 25, 2015, 8:28 PM</small></h4>
+              <p>Me too! WOW!</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid" id="footer">
+  <h4><center>@ Samprit All Right Reserved</center></h4>
+</footer>
+
+</body>
+</html>

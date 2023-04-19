@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link href="https://cdn4.vectorstock.com/i/1000x1000/62/48/green-round-glossy-login-icon-vector-2976248.jpg" rel="icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <style>
+
+body{
+background-color: #008374;
+color: white;
+font-size: 20px;
+
+}
+
+.inner{
+    /* background-color: bisque; */
+    padding-top: 40px ;
+
+    
+}
+input{
+  
+
+    width: 100%;
+    height: 40px;
+    margin: 12px;
+    color: #7f0683;
+    border-radius: 10px;
+border:1px 1px 1px 1px #85008a;
+   text-align: center;
+
+  
+
+}
+
+
+h2{
+  color: rgb(244, 169, 70);
+}
+
+footer{
+background-color: rgb(42, 40, 40);
+padding-top: 15px;
+padding-bottom: 10px;
+}
+
+
+@media(max-width:768px){
+  input{
+  
+
+  width: 100%;
+  height: 40px;
+  margin: 12px;
+  color: #7f0683;
+  border-radius: 10px;
+border:1px 1px 1px 1px #85008a;
+ text-align: center;
+
+
+
+
+}
+
+
+body{
+background-color: #008374;
+color: white;
+font-size: 30px;
+
+}
+
+}
+
+
+
+
+
+
+  /* Set the width and height of the scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Set the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+  
+    background-color: #85008a;
+  }
+  
+  /* Set the color of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(189, 9, 9);
+  }
+  
+  /* Set the color of the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 0, 194);
+  }
+    </style>
+</head>
+<body>
+    <div class="inner container">
+      
+
+ 
+  <center>
+<h1><b><span style="color: rgb(244, 169, 70);">Registration</span> <span style="color: red;">Page</span></b></h1>
+</center>
+<form action="" method="post">
+    {% csrf_token %}
+   <br>  
+{#    <input type="text"  placeholder="Full name"><br> #} 
+{#    <input type="number" name="face_id" placeholder="Number" ><br>#}
+{#    <input type="text" name="email" id="" placeholder="Email"> <br>#}
+{#    <input type="text" name="phone" placeholder="Phone"><br>#}
+{#    <input type="text" name="job" id="" placeholder="Job"><br>#}
+{#    <input type="text" name="address" placeholder="Address"><br>#}
+{#    <input type="text" name="bio" placeholder="About"><br>#}
+{#    <input type="file" name="dp" accept="image/*" id=""><br>#}
+{#    <input type="submit" value="Register"><br>#}
+{#    <input type="reset" value="Clear">#}
+    {{ form.as_p }}
+    <input type="submit" value="Register" class="btn btn-warning"><br><br>
+    <a href="{% url 'login' %}"><input value="Login" class="btn btn-danger"> </button></a>
+</form>
+
+    </div>
+
+<br><br><br>
+<div class="container">
+<h2>What is lbphfacerecognizer in Python ?</h2>
+<br>
+<p>
+  lbphfacerecognizer_create is a function in the OpenCV library used for face recognition. It creates an instance of the Local Binary Patterns Histograms (LBPH) Face Recognizer class, which can be used to train a model on a set of images and then recognize faces in real-time video or images. The LBPH algorithm works by extracting a set of local binary patterns from an image and creating a histogram of their occurrences. This histogram is then used to match the image to known faces in the training set. The LBPH Face Recognizer is a popular choice for face recognition applications due to its simplicity and effectiveness, particularly when dealing with relatively small datasets. The function can be implemented using 
+  the C++ or Python programming languages and requires the OpenCV library to be installed on the machine.
+</p>
+<br>
+<h2>The Local Binary Patterns (LBPs) for face recognition algorithm</h2>
+<br>
+<p>
+  The face recognition algorithm we’re covering here today was first presented by Ahonen et al. on their 2004 publication, Face Recognition with Local Binary Patterns.
+
+In this section, we’ll present an overview of the algorithm. As you’ll see, it’s actually quite simple.
+Then, for each of these cells, we compute a Local Binary Pattern histogram.
+
+By definition, a histogram throws away all spatial information regarding how the patterns are oriented next to each other. However, by computing a histogram for each of the cells, we actually are able to encode a
+ level of spatial information such as the eyes, nose, mouth, etc., that we would otherwise not have.
+
+ <br>As you can see, the LBPs for face recognition algorithm is quite simple! Extracting Local Binary Patterns isn’t a challenging task — and extending the extraction method to compute histograms for 7×7 = 49 cells is straightforward enough.
+
+ <br>Before we close this section, it’s important to note that the LBPs for face recognition algorithm has the added benefit of being updatable as new faces are introduced to the dataset.
+ <br>
+ Other popular algorithms, such as Eigenfaces, require that all faces to be identified be present at training time. This implies that if a new face is added to the dataset the entire Eigenfaces classifier has to be re-trained which can be quite computationally intensive.
+ <br>
+ Instead, the LBPs for face recognition algorithm can simply insert new face samples without having to be re-trained at all — an obvious benefit when working with face datasets where people are being added or removed from the dataset with routine frequency.
+ <br>
+</p>
+</div>
+
+</body>
+
+<br><br><br><br>
+<footer class="container-fluid" id="footer">
+  <h4><center>@ Samprit All Right Reserved</center></h4>
+</footer>
+</html>

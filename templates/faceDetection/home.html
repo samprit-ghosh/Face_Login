@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="https://cdn4.vectorstock.com/i/1000x1000/62/48/green-round-glossy-login-icon-vector-2976248.jpg" rel="icon">
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+input,
+textarea,
+button,
+select, img, span,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+   outline: 0;
+}
+
+/*Fonts from external source*/
+@font-face {
+  src: url(C:\Users\Home\AppData\Local\Temp\atom-118019-14536-1ea9572.rtm9ozuxr\league-spartan.zip\LeagueSpartan-Bold.otf);
+  font-family: League Spartan;
+}
+/*Fonts from external source*/
+
+
+
+  /* Set the width and height of the scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Set the background color of the scrollbar track */
+  ::-webkit-scrollbar-track {
+  
+    background-color: #85008a;
+  }
+  
+  /* Set the color of the scrollbar thumb */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(189, 9, 9);
+  }
+  
+  /* Set the color of the scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 0, 194);
+  }
+/*Navigation Bar*/
+
+
+
+
+/*Hero Image*/
+body {
+  /* width: 100vw;
+  height: 100vh; */
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cc1f82f635206f99e3132d9ebd24db6c&auto=format&fit=crop&w=1951&q=80');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+
+  margin-top: 150px;
+  width: 500px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-family: League Spartan, sans-serif;
+  font-weight: 500;
+  font-size: 45px;
+  color: white;
+}
+
+#photography {
+  font-size: 60px;
+  letter-spacing: 0.5px;
+}
+
+header p {
+  margin-bottom: 20px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: white;
+  font-size: 18px;
+}
+
+header button {
+  border: 2px solid white;
+  color: white;
+  font-family: 'Roboto', Segoe UI, calibri, Helvetica, serif;
+  padding: 10px;
+  font-size: 18px;
+  width: 160px;
+  border-radius: 500px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+
+  margin-right: 20px;
+}
+
+footer{
+background-color: rgb(42, 40, 40);
+padding-top: 25px;
+padding-bottom: 20px;
+color: beige;
+width: 100%;
+margin-top: 90px;
+}
+
+header button:hover, button:active {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 676px) {
+  .header-text {
+    width: 95%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 601px) {
+  #photography {
+    font-size: 45px;
+  }
+  header h1 {
+    font-size: 30px;
+  }
+  header p {
+    font-size: 15px;
+    width: 85%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  header button {
+    font-size: 16px;
+    width: 140px;
+  
+  }
+}
+
+@media screen and (max-width: 460px) {
+  #photography {
+    font-size: 35px;
+  }
+  header h1 {
+    font-size: 28px;
+  }
+}
+/*Hero Image*/
+
+  </style>
+</head>
+<!-- <body>
+  <h1>This is home page</h1>
+<p>if you are not registered <a href="{% url 'register' %}">Register</a></p> <br>
+<p>Login <a href="{% url 'login' %}">login</a></p> <br>
+ -->
+
+
+
+
+
+   
+<!--Navigation Bar-->
+
+
+
+<!--Hero Image-->
+  <header>
+    <div class="header-text">
+    <h1> <span  style="color: rgb(255, 162, 41);">Welcome</span> <br><span id="photography"> <span style="color: rgb(190, 20, 20);">To Face Login</span> </span></h1><br>
+    <p> Face login is a method of authentication that uses facial recognition technology to verify a user's identity. 
+      This is a web based facial log in/ Sign up website which uses Facial recognition for user authentication.
+
+It uses django server for running the keras neural network model. The model runs on the server side and accepts requests from clients.
+    </p>
+    <br><br><a href="{% url 'login' %}"><button> Login</button></a>
+    <a href="{% url 'register' %}"> <button> Register </button></a>
+    </div>
+  </header>
+  <!--Hero Image-->
+  
+</body>
+
+
+<br><br><br><br>
+<footer>
+  <h4><center>@ Samprit All Right Reserved</center></h4>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
